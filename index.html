@@ -9,6 +9,157 @@
   <title>Kanban task management web app</title>
 </head>
 <body>
+  <div class="outerContainer">
+    <!-- popup when user presses card -->
+    <div class="overlay1">
+      <div class="taskPopUp">
+        <div class="ellisisContainer">
+          <h2>Research pricing points of various competitors and trial different business models</h2>
+          <img class="popUpEllipsis" src="assets\icon-vertical-ellipsis.svg" alt="ellipsisBtn">
+        </div>
+        <div class="DescriptionContainer">
+          <p class="taskDescription">We know what we're planning to build for version one. Now we need to finalise the first pricing model we'll use. Keep iterating the subtasks until we have a coherent proposition.</p>
+        </div>
+        <div class="subtaskOuterContainer">
+          <p>Subtasks (<span class="tasksDone"> 2 </span>of<span class="totalTasks">3</span>)</p>
+          <div class="subtaskContainer"></div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <aside class="SideBar">
+      <div class="logoContainer">
+        <img src="assets\logo-dark.svg" alt="logo">
+      </div>
+      <div class="boardContainer">
+        <div class="boards">
+          <p class="boardHeader">All Boards (<span>3</span>)</p>
+          <div class="board selectedBoard">
+            <img src="assets\icon-board.svg" alt="board">
+            <p>Platform Launch</p>
+          </div>
+          <div class="board">
+            <img src="assets\icon-board.svg" alt="board">
+            <p>Marketing Plan</p>
+          </div>
+          <div class="board">
+            <img src="assets\icon-board.svg" alt="board">
+            <p>Roadmap</p>
+          </div>
+          <div class="Newboard">
+            <img src="assets\icon-board.svg" alt="board">
+            <p>+ Create New Board</p>
+          </div>
+        </div>
+        <div class="sideBarControl">
+          <div class="lightDarkContainer">
+            <img src="assets\icon-light-theme.svg" alt="sun-Icon">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+            <img src="assets\icon-dark-theme.svg" alt="moon-icon">
+          </div>
+          <div class="sideBar-DisplayContainer">
+            <img src="assets\icon-hide-sidebar.svg" alt="sidebar-icon">
+            <p>Hide Sidebar</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main class="TaskContainer">
+      <div class="mainBar">
+        <div class="logo_container">
+        <img class="mobileLogo" src="assets\logo-mobile.svg" alt="logo">
+        <h1 class="BoardTitle">Platform Launch</h1>
+        <img class="chevronDown" src="assets\icon-chevron-down.svg" alt="arrow-down">
+      </div>
+        <div class="Container_NewTask">
+          <button> <img class="buttonPlusImg" src="assets\icon-add-task-mobile.svg" alt="plus"> Add New Task</button>
+          <img class="ellipsisBtn" src="assets\icon-vertical-ellipsis.svg" alt="icon-vertical-ellipsis">
+        </div>
+      </div>
+      <div class="columnOuterContainer">
+        <div class="emptyBoard">
+          <p>This board is empty. Create a new column to get started</p>
+          <button class="newColumnbtn"><img class="buttonPlusImg" src="assets\icon-add-task-mobile.svg" alt="plus"> Add New Column</button>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="columnNameContainer">
+              <div class="cirlce todo"></div>
+              <p class="columnName">Todo (<span class="columnTaskCount">4</span>)</p>
+            </div>
+            <div class="task">
+              <p class="taskName">Build UI for onboarding flow</p>
+              <p class="taskCount"><span>0</span> of <span>6</span> subtasks</p>
+            </div>
+            <div class="task">
+              <p class="taskName">Build UI for onboarding flow</p>
+              <p class="taskCount"><span>0</span> of <span>6</span> subtasks</p>
+            </div>
+            <div class="task">
+              <p class="taskName">Build UI for onboarding flow</p>
+              <p class="taskCount"><span>0</span> of <span>6</span> subtasks</p>
+            </div>
+            <div class="task">
+              <p class="taskName">Build UI for onboarding flow</p>
+              <p class="taskCount"><span>0</span> of <span>6</span> subtasks</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="columnNameContainer">
+              <div class="cirlce doing"></div>
+              <p class="columnName">Doing (<span class="columnTaskCount">4</span>)</p>
+            </div>
+            <div class="task">
+              <p class="taskName">Build UI for onboarding flow</p>
+              <p class="taskCount"><span>0</span> of <span>6</span> subtasks</p>
+            </div>
+            <div class="task">
+              <p class="taskName">Build UI for onboarding flow</p>
+              <p class="taskCount"><span>0</span> of <span>6</span> subtasks</p>
+            </div>
+            <div class="task">
+              <p class="taskName">Build UI for onboarding flow</p>
+              <p class="taskCount"><span>0</span> of <span>6</span> subtasks</p>
+            </div>
+            <div class="task">
+              <p class="taskName">Build UI for onboarding flow</p>
+              <p class="taskCount"><span>0</span> of <span>6</span> subtasks</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="columnNameContainer">
+              <div class="cirlce done"></div>
+              <p class="columnName">Done (<span class="columnTaskCount">4</span>)</p>
+            </div>
+            <div class="task">
+              <p class="taskName">Build UI for onboarding flow</p>
+              <p class="taskCount"><span>0</span> of <span>6</span> subtasks</p>
+            </div>
+            <div class="task">
+              <p class="taskName">Build UI for onboarding flow</p>
+              <p class="taskCount"><span>0</span> of <span>6</span> subtasks</p>
+            </div>
+            <div class="task">
+              <p class="taskName">Build UI for onboarding flow</p>
+              <p class="taskCount"><span>0</span> of <span>6</span> subtasks</p>
+            </div>
+            <div class="task">
+              <p class="taskName">Build UI for onboarding flow</p>
+              <p class="taskCount"><span>0</span> of <span>6</span> subtasks</p>
+            </div>
+          </div>
+          <div class="AddColumn">
+            <h1><img src="assets\icon-add-task-mobile.svg" alt="add icon"> Add Column</h1>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
 <script src="app.js"></script>
 </body>
 </html>

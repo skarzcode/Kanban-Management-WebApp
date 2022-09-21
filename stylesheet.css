@@ -2,4 +2,759 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: none;
+    overflow: -moz-scrollbars-none;
+}
+
+.outerContainer{
+    width: 100%;
+    height: 1px;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.overlay1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.taskPopUp{
+    width: 35%;
+    height: 80%;
+    background-color: whitesmoke;
+}
+
+.ellisisContainer{
+    width: 100%;
+    height: 20%;
+    background-color: rebeccapurple;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ellisisContainer h2{
+    width: 80%;
+    background-color: yellow;
+}
+
+.popUpEllipsis{
+    width: 1%;
+}
+
+.DescriptionContainer{
+    width: 100%;
+    height: 20%;
+    min-height: 20%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskDescription{
+    width: 85%;
+}
+
+.subtaskOuterContainer{
+    width: 100%;
+    height: 30%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.subtaskContainer{
+    width: 100%;
+    height: 40%;
+    background-color: white;
+}
+
+
+.mobileLogo{
+    display: none;
+}
+
+.SideBar{
+    width: 20%;
+    height: 100%;
+    background-color: white;
+    border-right: solid lightgrey 1px;
+}
+
+.logoContainer{
+    width: 100%;
+    height: 15%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoContainer img{
+    width: 80%;
+    object-fit: contain;
+}
+
+.boardContainer{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.boards{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.boardHeader{
+    align-self: center;
+    margin: 10px 0px;
+    color: grey;
+}
+
+.board{
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px 0px;
+    color: grey;
+}
+
+.selectedBoard{
+    background-color: #635FC7;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+}
+
+.board p{
+    width: 50%;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.Newboard{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px 0px;
+    color: #635FC7; 
+    font-weight: bolder;
+}
+
+.Newboard p{
+    width: 60%;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sideBarControl{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lightDarkContainer{
+    width: 80%;
+    height: 30%;
+    background-color: #f4f7fd;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sideBar-DisplayContainer{
+    width: 80%;
+    height: 30%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sideBar-DisplayContainer img{
+    margin: 0px 20px;
+}
+/* toggle switch for light and dark mode */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+.TaskContainer{
+    width: 80%;
+    height: 100%;
+    background-color: white;
+}
+
+.mainBar{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.chevronDown{
+    display: none;
+}
+
+.logo_container{
+    width: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Container_NewTask{
+    width: 25%;
+    height: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Container_NewTask button{
+    background-color: #635FC7;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ellipsisBtn{
+    height: 30%;
+    cursor: pointer;
+}
+
+.buttonPlusImg{
+    margin: 0px 5px;
+}
+
+.columnOuterContainer{
+    width: 100%;
+    height: 85%;
+    background-color: #F4F7FD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emptyBoard{
+    width: 40%;
+    height: 25%;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+
+.newColumnbtn{
+    background-color: #635FC7;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer; 
+    margin: 20px auto;
+}
+
+.columns{
+    width: 99%;
+    height: 99%;
+    background-color: #F4F7FD;
+    overflow: scroll;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.columns::-webkit-scrollbar {
+    display: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.column{
+    width: 25%;
+    min-width: 25%;
+    height: 95%;
+    margin: 0px 10px;
+    overflow: scroll;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction:column;
+}
+
+.AddColumn{
+    width: 20%;
+    min-width: 25%;
+    height: 95%; 
+    border-radius: 20px;
+    background-color: #EAF0FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(252, 252, 252);
+}
+
+.AddColumn h1{
+    cursor: pointer;
+}
+
+.column::-webkit-scrollbar {
+    display: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.columnNameContainer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.columnNameContainer p{
+    margin: 0px 10px;
+}
+.cirlce{
+    width: 1vw;
+    height: 1vw;
+    border-radius: 100%;
+    background-color: #49c4e5;
+    margin: 0px 10px;
+}
+
+.doing{
+    background-color: #8471F2;
+}
+
+.done{
+    background-color: #67E2AE;
+}
+
+.task{
+    width: 99%;
+    height: 1px;
+    min-height: 20%;
+    background-color: white;
+    margin: 10px auto;
+    border-radius: 0.7vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.task p{
+    margin: 5px 10px;
+}
+
+.taskName{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.taskCount{
+    font-size: 14px;
+    color: gray;
+}
+
+@media only screen and (min-width: 2000px) {
+    .boardHeader{
+        font-size: 1.1vw;
+    }
+
+    .board p{
+       font-size: 1.1vw;
+    }
+
+    .board img{
+        width: 7%;
+    }
+
+    .Newboard p{
+        font-size: 1vw;
+    }
+
+    .Newboard img{
+        width: 6%;
+    }
+
+    .BoardTitle{
+        font-size: 2vw;
+    }
+
+    .selectedBoard{
+        border-top-right-radius: 1.2vw;
+        border-bottom-right-radius: 1.2vw;
+    }
+
+    .Container_NewTask button{
+       font-size: 1vw;
+       padding: 1vw 1.5vw;
+       border-radius: 1.2vw;
+    }
+
+    .buttonPlusImg{
+        width: 1vw;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 20%;
+        height: 40%;
+      }
+
+      .slider:before {
+    position: absolute;
+    content: "";
+    height: 1vw;
+    width: 1vw;
+    left: 5%;
+    bottom: 15%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+    
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(1.8vw);
+  }
+
+  .lightDarkContainer img{
+   width: 7%;
+}
+
+.sideBar-DisplayContainer img{
+    width: 7%;
+}
+
+.sideBar-DisplayContainer p{
+    font-size: 1vw;
+}
+
+.newColumnbtn{
+    font-size: 1vw;
+       padding: 1vw 1.5vw;
+       border-radius: 1.2vw;
+}
+
+.emptyBoard p{
+    font-size: 1.1vw;
+}
+
+.taskName {
+    font-size: 1.3vw;
+}
+
+.taskCount {
+    font-size: 1vw;
+}
+
+.column{
+    margin: 0px 0.8vw;
+}
+
+.columnNameContainer p {
+    font-size: 1vw;
+    margin: 0px 0.8vw;
+}
+
+.AddColumn h1{
+    font-size: 2vw;
+}
+
+.ellisisContainer h2{
+    width: 80%;
+    font-size: 1.5vw;
+}
+
+.taskDescription{
+    font-size: 1vw;
+}
+
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .Container_NewTask{
+        width: 30%;
+    }
+
+    .emptyBoard {
+        width: 60%;
+        height: 25%;
+    }
+
+    .column {
+        width: 25%;
+        min-width: 35%;
+    }
+
+    .AddColumn {
+        width: 20%;
+        min-width: 35%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .SideBar {
+        width: 35%;
+        height: 100%;
+    }
+
+    .TaskContainer {
+        width: 65%;
+        height: 100%;
+    }
+
+    .BoardTitle{
+        font-size: 26px;
+    }
+
+    .Container_NewTask{
+        width: 40%;
+    }
+
+    .emptyBoard {
+        width: 80%;
+        height: 25%;
+    }
+
+    .Container_NewTask button {
+        padding: 10px 10px;
+    }
+
+    .column {
+        width: 25%;
+        min-width: 45%;
+    }
+
+    .AddColumn {
+        width: 20%;
+        min-width: 45%;
+    }
+
+    .AddColumn h1 {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+.Container_NewTask {
+    width: 40%;
+}
+
+.column {
+    width: 25%;
+    min-width: 50%;
+}
+
+.AddColumn {
+    width: 20%;
+    min-width: 50%;
+}
+
+.cirlce {
+    width: 1.3vw;
+    height: 1.3vw;
+    
+}
+}
+
+@media only screen and (max-width: 550px) {
+    .mobileLogo{
+        display: block;
+        width: 10%;
+    }
+
+    .TaskContainer {
+        width: 100%;
+        height: 100%;
+    }
+
+    .logoContainer {
+        display: none;
+    }
+
+    .SideBar {
+        position: absolute;
+        width: 60%;
+        height: 55%;
+        min-height: 55%;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -35%);
+        display: none;
+    }
+
+
+    .displayBlock{
+        display: block;
+    }
+    
+
+    .boardContainer {
+        width: 100%;
+        height: 100%;
+    }
+
+    .boards {
+        width: 100%;
+        height: 1px;
+        min-height: 70%;
+    }
+
+    .sideBar-DisplayContainer {
+    display: none;
+    }
+
+    .sideBarControl {
+        width: 100%;
+        height: 20%;
+    }
+
+    .logo_container {
+        width: 60%;
+        height: 80%;
+    }
+
+    .BoardTitle {
+        font-size: 22px;
+    }
+
+    .chevronDown{
+        display: block;
+    }
+
+    .Container_NewTask button {
+        padding: 10px 5px;
+        font-size: 10px;
+    }
+
+    .Container_NewTask {
+        width: 35%;
+    }
+
+    .cirlce {
+        width: 1.5vw;
+        height: 1.5vw;
+        
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .BoardTitle {
+        font-size: 18px;
+    }
+
+    .logo_container {
+        width: 60%;
+        height: 80%;
+    }
+
+    .Container_NewTask {
+        width: 40%;
+    }
 }
